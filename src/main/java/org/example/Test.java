@@ -11,9 +11,10 @@ import org.example.util.Keys;
 
 import java.security.PrivateKey;
 import java.security.PublicKey;
+import java.util.Arrays;
 
 public class Test {
-    public static void main(String[] args) throws Exception {
+    public static void main(String args[]) throws Exception {
         // generate the key pair
         Person alice=  new Person("0x1a", Keys.generateKeyPair());
         PublicKey publicKeyA = alice.getKeyPair().getPublic();
@@ -21,6 +22,7 @@ public class Test {
 
         Person bob=  new Person("0x2b", Keys.generateKeyPair());
         PublicKey publicKeyB = bob.getKeyPair().getPublic();
+        System.out.println(Keys.encodeToString(publicKeyB.getEncoded()));
         PrivateKey privateKeyB = bob.getKeyPair().getPrivate();
 
         // creat challenge id

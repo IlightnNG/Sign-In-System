@@ -6,6 +6,8 @@ import org.example.util.Hash;
 import org.example.util.HybridEncrypt;
 import org.example.util.JsonControl;
 import org.example.util.Keys;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.nio.charset.StandardCharsets;
 import java.security.PrivateKey;

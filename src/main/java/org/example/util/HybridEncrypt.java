@@ -1,14 +1,13 @@
 package org.example.util;
 
 import org.example.classes.Envelope;
+import org.example.response.CreateEnvelopeResponse;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.nio.charset.StandardCharsets;
 import java.security.*;
-import java.util.Base64;
 
 public class HybridEncrypt {
 
@@ -46,7 +45,8 @@ public class HybridEncrypt {
 
 
     // encrypt text and creat Envelope
-    public static Envelope encryptAES(byte[] plainText, byte[] aesKey,byte[] encryptedAesKey,byte[] challenge) throws Exception {
+    public static CreateEnvelopeResponse encryptAES(byte[] plainText, byte[] aesKey, byte[] encryptedAesKey, byte[] challengeId) throws Exception {
+
         SecretKeySpec secretKeySpec = new SecretKeySpec(aesKey, AES);
 
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
@@ -61,7 +61,7 @@ public class HybridEncrypt {
 
         // 通常，你会将IV与密文一起存储或传输
         // 例如，可以将IV和密文连接起来，或者将IV作为单独的字段存储
-        return new Envelope(cipherText,iv,encryptedAesKey,challenge);
+        return  new CreateEnvelopeResponse(cipherText,iv,encryptedAesKey,challengeId);
     }
 
     public static byte[] decryptAES(Envelope envelope, byte[] aesKey) throws Exception {

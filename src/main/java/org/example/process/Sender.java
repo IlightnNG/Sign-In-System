@@ -8,10 +8,12 @@ import org.example.util.Hash;
 import org.example.util.HybridEncrypt;
 import org.example.util.JsonControl;
 import org.example.util.Keys;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.*;
 
 public class Sender {
+
 
     public static Envelope creatEnvelope(Person person, PublicKey publicKeyB, String content,byte[]  challenge) throws Exception {
         // creat abstract
