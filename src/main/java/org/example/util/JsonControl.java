@@ -1,6 +1,7 @@
 package org.example.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.example.classes.DidDocument;
 import org.example.classes.Envelope;
 import org.example.classes.InfoString;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -47,4 +48,24 @@ public class JsonControl {
         }
         return new Envelope();
     }
+    public static String didDocToJson(DidDocument didDocument) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            return mapper.writeValueAsString(didDocument);
+        }catch (JsonProcessingException e){
+            e.printStackTrace();
+        }
+        return  new String();
+    }
+
+    public static DidDocument jsonToDidDoc(String didDocString)  {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            return mapper.readValue(didDocString, DidDocument.class);
+        }catch (JsonProcessingException e){
+            e.printStackTrace();
+        }
+        return new DidDocument();
+    }
+
 }

@@ -6,15 +6,15 @@ public class Info {
 
     private PublicKey publicKey;
     private String content;
-    private byte[] signature;
+    private byte[] contentSignature;
 
     public Info() {
     }
 
-    public Info(PublicKey publicKey, String content, byte[] signature) {
+    public Info(PublicKey publicKey, String content, byte[] contentSignature) {
         this.publicKey = publicKey;
         this.content = content;
-        this.signature = signature;
+        this.contentSignature = contentSignature;
     }
 
     public PublicKey getPublicKey() {
@@ -33,11 +33,11 @@ public class Info {
         this.content = content;
     }
 
-    public byte[] getSignature() {
-        return signature;
+    public byte[] getContentSignature() {
+        return contentSignature;
     }
 
-    public void setSignature(byte[] signature) {
-        this.signature = signature;
+    public void setContentSignature(byte[] contentSignature) {
+        this.contentSignature = contentSignature;
     }
 }

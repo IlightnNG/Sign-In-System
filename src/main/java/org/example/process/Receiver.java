@@ -16,12 +16,12 @@ import java.util.Objects;
 
 public class Receiver {
 
-    public static boolean verify(PrivateKey privateKey, Envelope envelope,byte[] challenge) throws Exception {
+    public static boolean verify(PrivateKey privateKey, Envelope envelope) throws Exception {
         // 确保是响应了目标请求
-        if (!Objects.equals(Keys.encodeToString(envelope.getChallenge()), Keys.encodeToString(challenge))){
-            System.out.println("Challenge id not match!");
-            return false;
-        }
+//        if (!Objects.equals(Keys.encodeToString(envelope.getChallenge()), Keys.encodeToString(challenge))){
+//            System.out.println("Challenge id not match!");
+//            return false;
+//        }
 
         // 使用RSA解密AES密钥
         byte[] decryptedAesKey = HybridEncrypt.rsaDecrypt(envelope.getEncryptedAesKey(), privateKey);

@@ -45,7 +45,7 @@ public class HybridEncrypt {
 
 
     // encrypt text and creat Envelope
-    public static CreateEnvelopeResponse encryptAES(byte[] plainText, byte[] aesKey, byte[] encryptedAesKey, byte[] challengeId) throws Exception {
+    public static CreateEnvelopeResponse encryptAES(byte[] plainText, byte[] aesKey, byte[] encryptedAesKey) throws Exception {
 
         SecretKeySpec secretKeySpec = new SecretKeySpec(aesKey, AES);
 
@@ -61,7 +61,7 @@ public class HybridEncrypt {
 
         // 通常，你会将IV与密文一起存储或传输
         // 例如，可以将IV和密文连接起来，或者将IV作为单独的字段存储
-        return  new CreateEnvelopeResponse(cipherText,iv,encryptedAesKey,challengeId);
+        return  new CreateEnvelopeResponse(cipherText,iv,encryptedAesKey);
     }
 
     public static byte[] decryptAES(Envelope envelope, byte[] aesKey) throws Exception {

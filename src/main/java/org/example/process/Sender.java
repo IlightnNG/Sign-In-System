@@ -35,7 +35,7 @@ public class Sender {
         byte[] encryptedAesKey = HybridEncrypt.rsaEncrypt(aesKey, publicKeyB);
 
         // 使用AES密钥加密 info+iv 得到envelope
-        Envelope envelope = HybridEncrypt.encryptAES(infoJson.getBytes(), aesKey,encryptedAesKey,challenge);
+        Envelope envelope = HybridEncrypt.encryptAES(infoJson.getBytes(), aesKey,encryptedAesKey);
 
         System.out.println("Envelope: "+envelope.toString());
 

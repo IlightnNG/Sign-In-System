@@ -13,14 +13,13 @@ public class CreateEnvelopeResponse extends Envelope {
 
     private byte[] encryptedAesKey; // AES key encrypted by RAS public key
 
-    private byte[] challenge; // challenge id to match post
+
     public CreateEnvelopeResponse() {
     }
-    public CreateEnvelopeResponse(byte[] encryptedInfo, byte[] iv, byte[] encryptedAesKey, byte[] challenge) {
+    public CreateEnvelopeResponse(byte[] encryptedInfo, byte[] iv, byte[] encryptedAesKey) {
         this.encryptedInfo = encryptedInfo;
         this.iv = iv;
         this.encryptedAesKey = encryptedAesKey;
-        this.challenge = challenge;
     }
 
 
@@ -43,7 +42,6 @@ public class CreateEnvelopeResponse extends Envelope {
                 "encryptedInfo=" + Arrays.toString(encryptedInfo) +
                 ", iv=" + Arrays.toString(iv) +
                 ", encryptedAesKey=" + Arrays.toString(encryptedAesKey) +
-                ", challenge=" + Arrays.toString(challenge) +
                 '}';
     }
 
@@ -62,12 +60,6 @@ public class CreateEnvelopeResponse extends Envelope {
     public void setIv(byte[] iv) {
         this.iv = iv;
     }
-    public byte[] getChallenge() {
-        return challenge;
-    }
 
-    public void setChallenge(byte[] challenge) {
-        this.challenge = challenge;
-    }
 
 }

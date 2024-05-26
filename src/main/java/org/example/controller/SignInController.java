@@ -1,7 +1,9 @@
 package org.example.controller;
 
 import org.example.request.ChallengeRequest;
+import org.example.request.GetDidDocRequest;
 import org.example.response.CreateEnvelopeResponse;
+import org.example.response.DidDocResponse;
 import org.example.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,5 +24,11 @@ public class SignInController {
 
         // 返回response信息
         return ResponseEntity.ok(response) ;
+    }
+    // to check if did exist
+    @PostMapping("/getDidDoc")
+    public ResponseEntity<?> isDidExist(@RequestBody GetDidDocRequest request){
+        DidDocResponse didDocResponse = accountService.getDidDoc(request);
+        return ResponseEntity.ok(didDocResponse);
     }
 }

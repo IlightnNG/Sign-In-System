@@ -43,7 +43,7 @@ public class Test {
         Envelope readEnvelope = JsonControl.jsonToEnvelope(readEnvelopeString);
 
         // verify
-        boolean isValid = Receiver.verify(privateKeyB,readEnvelope,challenge);
+        boolean isValid = Receiver.verify(privateKeyB,readEnvelope);
 
     }
 }

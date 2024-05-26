@@ -13,7 +13,7 @@ public class InfoString {
     public InfoString(Info info){
         this.publicKey = Keys.encodeToString(info.getPublicKey().getEncoded());
         this.content = info.getContent();
-        this.signature = Keys.encodeToString(info.getSignature());
+        this.signature = Keys.encodeToString(info.getContentSignature());
     }
 
     public InfoString(String publicKey, String content, String signature) {

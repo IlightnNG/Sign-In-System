@@ -11,15 +11,13 @@ public class Envelope {
     private byte[] iv;  // random iv to decryptAES, transmit with encrypted info
 
     private byte[] encryptedAesKey; // AES key encrypted by RAS public key
-
-    private byte[] challenge; // challenge id to match post
+    
     public Envelope() {
     }
-    public Envelope(byte[] encryptedInfo, byte[] iv, byte[] encryptedAesKey, byte[] challenge) {
+    public Envelope(byte[] encryptedInfo, byte[] iv, byte[] encryptedAesKey) {
         this.encryptedInfo = encryptedInfo;
         this.iv = iv;
         this.encryptedAesKey = encryptedAesKey;
-        this.challenge = challenge;
     }
 
 
@@ -42,7 +40,6 @@ public class Envelope {
                 "encryptedInfo=" + Arrays.toString(encryptedInfo) +
                 ", iv=" + Arrays.toString(iv) +
                 ", encryptedAesKey=" + Arrays.toString(encryptedAesKey) +
-                ", challenge=" + Arrays.toString(challenge) +
                 '}';
     }
 
@@ -61,12 +58,6 @@ public class Envelope {
     public void setIv(byte[] iv) {
         this.iv = iv;
     }
-    public byte[] getChallenge() {
-        return challenge;
-    }
 
-    public void setChallenge(byte[] challenge) {
-        this.challenge = challenge;
-    }
 
 }

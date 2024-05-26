@@ -1,8 +1,5 @@
 package org.example.request;
 
-import java.security.PublicKey;
-import java.util.Arrays;
-
 public class ChallengeRequest {
     private String challengeId;
     private String publicKeyWeb;
