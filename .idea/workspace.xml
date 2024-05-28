@@ -4,25 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd43361b-dc7d-41fd-8be3-842b0611b0f1" name="Changes" comment="springboot">
-      <change afterPath="$PROJECT_DIR$/QRCodeImg/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/DidDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/request/GetDidDocRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/response/DidDocResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/Did.java" afterDir="false" />
+    <list default="true" id="cd43361b-dc7d-41fd-8be3-842b0611b0f1" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/classes/Envelope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Envelope.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/classes/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/classes/InfoString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/InfoString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/process/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/process/Receiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/process/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/process/Sender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/request/ChallengeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/request/ChallengeRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/response/CreateEnvelopeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/response/CreateEnvelopeResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/HybridEncrypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/HybridEncrypt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/JsonControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/JsonControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +155,9 @@
       <workItem from="1716623907165" duration="2180000" />
       <workItem from="1716629258730" duration="427000" />
       <workItem from="1716629695163" duration="8408000" />
-      <workItem from="1716723254197" duration="5051000" />
+      <workItem from="1716723254197" duration="5376000" />
+      <workItem from="1716876763912" duration="658000" />
+      <workItem from="1716904338191" duration="4380000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -184,15 +175,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716640203083</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <option name="closed" value="true" />
+      <created>1716728600742</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716728600742</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update" />
     <MESSAGE value="springboot" />
-    <option name="LAST_COMMIT_MESSAGE" value="springboot" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

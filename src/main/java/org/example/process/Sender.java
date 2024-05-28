@@ -23,7 +23,7 @@ public class Sender {
         byte[] signature = Keys.sign(conAbstract.getBytes(),person.getKeyPair().getPrivate());
 
         // creat info and convert to json
-        Info info = new Info(person.getKeyPair().getPublic(),content,signature);
+        Info info = new Info(person.getDid(),person.getKeyPair().getPublic(),content,signature);
         InfoString infoString = new InfoString(info);
         String infoJson= JsonControl.infoToJson(infoString);
         System.out.println(infoJson);

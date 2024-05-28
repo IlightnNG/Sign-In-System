@@ -13,12 +13,16 @@ import org.springframework.stereotype.Service;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.PublicKey;
+import java.util.Arrays;
 
 @Service
 public class AccountService {
 
     // generate the key pair
     Person alice=  new Person("0x1a", Keys.generateKeyPair());
+    Person bob=  new Person("0x1a", Keys.generateKeyPair());
+
+
 
     // content
     //String content = "hello world!fdafafdafadfafagdasgdasfewfa";
@@ -54,6 +58,11 @@ public class AccountService {
     }
 
     public CreateEnvelopeResponse creatEnvelope(ChallengeRequest challenge) throws Exception {
+        System.out.println("Alice public key: "+ Keys.encodeToString(alice.getKeyPair().getPublic().getEncoded()));
+        System.out.println("Alice private key: "+ Keys.encodeToString(alice.getKeyPair().getPrivate().getEncoded()));
+        System.out.println("Bob public key: "+ Keys.encodeToString(bob.getKeyPair().getPublic().getEncoded()));
+        System.out.println("Bob private key: "+ Keys.encodeToString(bob.getKeyPair().getPrivate().getEncoded()));
+
         // get challengeId
         String challengeId = challenge.getChallengeId();
 
@@ -64,10 +73,10 @@ public class AccountService {
         byte[] signature = Keys.sign(idAbstract.getBytes(),alice.getKeyPair().getPrivate());
 
         // creat info and convert to json
-        Info info = new Info(alice.getKeyPair().getPublic(),challengeId,signature);
+        Info info = new Info(alice.getDid(),alice.getKeyPair().getPublic(),challengeId,signature);
         InfoString infoString = new InfoString(info);
         String infoJson= JsonControl.infoToJson(infoString);
-        System.out.println(infoJson);
+        System.out.println("infoJson: "+ infoJson);
 
         // 生成Bob's AES密钥
         byte[] aesKey = HybridEncrypt.generateAESKey();

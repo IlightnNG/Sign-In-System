@@ -4,6 +4,7 @@ import java.security.PublicKey;
 
 public class Info {
 
+    private String did;
     private PublicKey publicKey;
     private String content;
     private byte[] contentSignature;
@@ -11,10 +12,19 @@ public class Info {
     public Info() {
     }
 
-    public Info(PublicKey publicKey, String content, byte[] contentSignature) {
+    public Info(String did,PublicKey publicKey, String content, byte[] contentSignature) {
+        this.did = did;
         this.publicKey = publicKey;
         this.content = content;
         this.contentSignature = contentSignature;
+    }
+
+    public String getDid() {
+        return did;
+    }
+
+    public void setDid(String did) {
+        this.did = did;
     }
 
     public PublicKey getPublicKey() {
